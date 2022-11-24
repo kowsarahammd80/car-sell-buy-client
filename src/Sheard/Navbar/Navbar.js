@@ -35,6 +35,9 @@ const Navbar = () => {
               <li class="nav-item fw-bold">
                 <Link to='/addproduct' class="nav-link text-white" >Add Product</Link>
               </li>
+              <li class="nav-item fw-bold">
+                <Link to='/myorder' class="nav-link text-white" >My Order</Link>
+              </li>
 
             </ul>
           </div>

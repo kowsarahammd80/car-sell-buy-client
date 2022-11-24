@@ -30,8 +30,8 @@ const CarCategoris = () => {
             <div class="card">
               <img src={car} class="card-img-top " alt="..." />
               <div class="card-body">
-                <h5 class="card-title text-center">Care name </h5>
-                <p class="card-text"> Seller Name</p>
+                <h5 class="card-title text-center"> Care name  </h5>
+                <p class="card-text"><i class="fa-regular fa-circle-check text-success"></i> Seller Name</p>
                 <p class="card-text"> Post Time: 12-11-2022</p>
                 <p class="card-text"> location: USA</p>
                 <p class="card-text"> Old Price: $ 1,00000</p>
@@ -63,7 +63,7 @@ const CarCategoris = () => {
               <img src={car} class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title text-center">Care name </h5>
-                <p class="card-text"> Seller Name</p>
+                <p class="card-text"> <i class="fa-regular fa-circle-check text-success"></i>  Seller Name</p>
                 <p class="card-text"> Post Time: 12-11-2022</p>
                 <p class="card-text"> location: USA</p>
                 <p class="card-text"> Old Price: $ 1,00000</p>
@@ -95,7 +95,7 @@ const CarCategoris = () => {
               <img src={car} class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title text-center">Care name </h5>
-                <p class="card-text"> Seller Name</p>
+                <p class="card-text"> <i class="fa-regular fa-circle-check text-success"></i> Seller Name</p>
                 <p class="card-text"> Post Time: 12-11-2022</p>
                 <p class="card-text"> location: USA</p>
                 <p class="card-text"> Old Price: $ 1,00000</p>

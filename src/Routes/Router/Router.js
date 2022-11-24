@@ -3,9 +3,12 @@ import Blogs from "../../Componets/Blogs/Blogs";
 import CarCategoris from "../../Componets/CarCategoris/CarCategoris";
 import Login from "../../Componets/Login/Login";
 import SignUp from "../../Componets/SinUp/SignUp";
+import Stripe from "../../Componets/Stripe/Stripe";
 import Main from "../../Layout/Main/Main";
 import AddProductPage from "../../Pages/AddProductPage/AddProductPage";
 import HomePage from "../../Pages/HomePage/HomePage";
+import MyOrderListPage from "../../Pages/MyOrderListPage/MyOrderListPage";
+import ProductMyList from "../../Pages/ProductMyList/ProductMyList";
 
 const routers = createBrowserRouter([ 
    {
@@ -35,6 +38,17 @@ const routers = createBrowserRouter([
        {
          path: '/addproduct',
          element: <AddProductPage></AddProductPage>
+       },
+       {
+        path: '/myorder',
+        element: <MyOrderListPage></MyOrderListPage>
+       },
+       {
+        path: '/stripe',
+        element: <Stripe/>
+       },
+       {
+        path: '/myProductList',
        }
     ]
    }
