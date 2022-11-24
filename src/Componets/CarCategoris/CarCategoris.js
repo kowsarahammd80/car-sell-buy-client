@@ -13,7 +13,7 @@ const CarCategoris = () => {
           <div className='text-center'>
             <div className='text-white'>
 
-              <h1 className=''> WELCOME <span className='text-warning1'> MOTORO <br /> AUTOMOTIVE THEME</span> </h1>
+              <h1 className='shadow-lg'> <span className=''>WELCOME</span> <span className='text-warning1'> MOTORO <br /> AUTOMOTIVE THEME</span> </h1>
 
             </div>
           </div>
@@ -30,7 +30,7 @@ const CarCategoris = () => {
             <div class="card">
               <img src={car} class="card-img-top " alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title text-center">Care name </h5>
                 <p class="card-text"> Seller Name</p>
                 <p class="card-text"> Post Time: 12-11-2022</p>
                 <p class="card-text"> location: USA</p>
@@ -40,15 +40,17 @@ const CarCategoris = () => {
 
                 <div className='d-flex justify-content-between'>
                   {/* modal start */}
-                 
+
                   <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Book Now
                   </button>
 
-                   <BookModal/> 
-                 
+                  <BookModal />
+
+                  <button className='btn btn-danger'> Boost Product </button>
+
                   {/* modal end */}
-                  
+
                   <button className='btn btn-warning'><i class="fa-solid fa-flag"></i> Report Item</button>
 
                 </div>
@@ -60,7 +62,7 @@ const CarCategoris = () => {
             <div class="card">
               <img src={car} class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title text-center">Care name </h5>
                 <p class="card-text"> Seller Name</p>
                 <p class="card-text"> Post Time: 12-11-2022</p>
                 <p class="card-text"> location: USA</p>
@@ -70,15 +72,17 @@ const CarCategoris = () => {
 
                 <div className='d-flex justify-content-between'>
                   {/* modal start */}
-                 
+
                   <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Book Now
                   </button>
 
-                   <BookModal/> 
-                 
+                  <BookModal />
+
+                  <button className='btn btn-danger'> Boost Product </button>
+
                   {/* modal end */}
-                  
+
                   <button className='btn btn-warning'><i class="fa-solid fa-flag"></i> Report Item</button>
 
                 </div>
@@ -90,7 +94,7 @@ const CarCategoris = () => {
             <div class="card">
               <img src={car} class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title text-center">Care name </h5>
                 <p class="card-text"> Seller Name</p>
                 <p class="card-text"> Post Time: 12-11-2022</p>
                 <p class="card-text"> location: USA</p>
@@ -100,15 +104,17 @@ const CarCategoris = () => {
 
                 <div className='d-flex justify-content-between'>
                   {/* modal start */}
-                 
+
                   <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Book Now
                   </button>
 
-                   <BookModal/> 
-                 
+                  <BookModal />
+
+                  <button className='btn btn-danger'> Boost Product </button>
+
                   {/* modal end */}
-                  
+
                   <button className='btn btn-warning'><i class="fa-solid fa-flag"></i> Report Item</button>
 
                 </div>

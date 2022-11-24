@@ -5,10 +5,13 @@ const BrandSection = () => {
   return (
     <div className='container d-flex justify-content-center align-items-center mt-4'>
 
-       <div>
-         <img src={brand} className="img-fluid" alt="" />
-       </div>
-      
+      <div>
+        <hr class="border border-danger border-2 opacity-50" />
+        <img src={brand} className="img-fluid" alt="" />
+        <hr class="border border-danger border-2 opacity-50" />
+      </div>
+
+
     </div>
   );
 };

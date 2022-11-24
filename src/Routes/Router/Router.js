@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Blogs from "../../Componets/Blogs/Blogs";
 import CarCategoris from "../../Componets/CarCategoris/CarCategoris";
-import Category from "../../Componets/Category/Category";
 import Login from "../../Componets/Login/Login";
 import SignUp from "../../Componets/SinUp/SignUp";
 import Main from "../../Layout/Main/Main";
+import AddProductPage from "../../Pages/AddProductPage/AddProductPage";
 import HomePage from "../../Pages/HomePage/HomePage";
 
 const routers = createBrowserRouter([ 
@@ -31,6 +31,10 @@ const routers = createBrowserRouter([
        {
          path: '/category',
          element: <CarCategoris></CarCategoris>
+       },
+       {
+         path: '/addproduct',
+         element: <AddProductPage></AddProductPage>
        }
     ]
    }
