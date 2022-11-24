@@ -28,7 +28,7 @@ const CarCategoris = () => {
 
           <div class="col">
             <div class="card">
-              <img src={car} class="card-img-top" alt="..." />
+              <img src={car} class="card-img-top " alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text"> Seller Name</p>
