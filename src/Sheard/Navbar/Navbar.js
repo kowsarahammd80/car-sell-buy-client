@@ -29,6 +29,9 @@ const Navbar = () => {
               <li class="nav-item fw-bold">
                 <Link to='/blog' class="nav-link text-white" >Blogs</Link>
               </li>
+              <li class="nav-item fw-bold">
+                <Link to='/category' class="nav-link text-white" >Category</Link>
+              </li>
 
             </ul>
           </div>
