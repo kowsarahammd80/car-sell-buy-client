@@ -21,7 +21,7 @@ const Category = () => {
             <div class="card-body text-center">
               <h5 class="card-title">Mercedes-Benz</h5>
               <div className=''>
-                <button className='btn bg-success text-white fw-bold'>See Car</button>
+                <button className='btn bg-success text-white fw-bold'> <i class="fa-duotone fa-car"></i> See Car</button>
               </div>
             </div>
           </div>

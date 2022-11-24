@@ -27,7 +27,7 @@ const Navbar = () => {
                 <Link to='/signup' class="nav-link text-white">Sign Up</Link>
               </li>
               <li class="nav-item fw-bold">
-                <Link to='/' class="nav-link text-white" >Home</Link>
+                <Link to='/blog' class="nav-link text-white" >Blogs</Link>
               </li>
 
             </ul>
