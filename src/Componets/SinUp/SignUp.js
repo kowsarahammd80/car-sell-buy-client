@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Auth/AuthProvider';
 import SocalSign from '../../Sheard/SocalSign/SocalSign';
 
 const SignUp = () => {
+
+  const {signUp} = useContext(AuthContext)
+  
+  const handleSignUp = event =>{
+    event.preventDefault()
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const photoURL = form.photoURL.value;
+    const password = form.password.value;
+     
+    console.log(name, photoURL, password, email)
+    signUp(email, password)
+    .then(result => {
+       const user = result.user
+       console.log(user)
+    })
+    .catch(error => console.error(error))
+
+  }
+
   return (
     <div className='container-fluid pb-4 bg-color text-color'>
 
@@ -36,7 +58,7 @@ const SignUp = () => {
 
 
 
-          <form className='w-75 pt-5 container' >
+          <form className='w-75 pt-5 container' onSubmit={handleSignUp}>
             <div className="mb-3">
               <label for="formGroupExampleInput" className="form-label fw-bold ">Full Name</label>
               <input type="text" name='name' className="form-control  inputField" placeholder="Full Name" required />
