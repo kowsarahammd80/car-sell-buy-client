@@ -21,22 +21,42 @@ const SignUp = () => {
     const password = form.password.value;
     const account = form.account.value;
 
-    console.log(name, photoURL, password, email)
+    
+
     signUp(email, password)
       .then(result => {
         const user = result.user
         console.log(user)
         setProfile(name, photoURL)
+        
+        // data post 
+        const userData = {
+          email: email,
+          name: name,
+          accountType: account
+       }
+
+       fetch('http://localhost:5000/registerData', {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify(userData)
+       })
+       .then(res => res.json())
+       .then(data => {
+         console.log(data)
         navigate(from, { replace: true })
+       })
+
+
+       
       })
       .catch(error => console.error(error))
       
-      const userData = {
-         email: email,
-         accountType: account
-      }
+      
 
-      console.log(userData)
+      
 
 
   }

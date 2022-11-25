@@ -18,8 +18,10 @@ const SocalSign = () => {
 
     providerLogIn(provider)
     .then(result => {
-       const user = result.user
-        console.log(user)
+       const email = result.user.email
+        console.log(email)
+        // data get
+        fetch(``)
         navigate(from, { replace: true })
     })
     .catch(error => console.error(error))
