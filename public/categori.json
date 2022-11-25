@@ -1,0 +1,110 @@
+[
+  {
+    "CategoryName": "Mercedes",
+    "CategoryImg": "https://m.economictimes.com/thumb/msid-87212639,width-1200,height-900,resizemode-4,imgsize-33084/mercedes-benz.jpg",
+    "productItem": [
+      {
+        "productName": "Mercedes1",
+        "productImg": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/concept-cars/_jcr_content/image/MQ6-12-image-20200908114040/00-mercedes-benz-eq-concept-cars-2560x1440.jpeg",
+        "SellerName": "Marzukerbar",
+        "SellerEmail": "omuk@gmail.com",
+        "location": "USA",
+        "OldPrice": 50000,
+        "useTime": "1 Year",
+        "SellPrice": 20000
+      },
+      {
+        "productName": "Mercedes2",
+        "productImg": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/concept-cars/_jcr_content/image/MQ6-12-image-20200908114040/00-mercedes-benz-eq-concept-cars-2560x1440.jpeg",
+        "SellerName": "Marzukerbar",
+        "SellerEmail": "omuk@gmail.com",
+        "location": "USA",
+        "OldPrice": 50000,
+        "useTime": "1 Year",
+        "SellPrice": 20000
+      },
+      {
+        "productName": "Mercedes3",
+        "productImg": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/concept-cars/_jcr_content/image/MQ6-12-image-20200908114040/00-mercedes-benz-eq-concept-cars-2560x1440.jpeg",
+        "SellerName": "Marzukerbar",
+        "SellerEmail": "omuk@gmail.com",
+        "location": "USA",
+        "OldPrice": 50000,
+        "useTime": "1 Year",
+        "SellPrice": 20000
+      }
+    ]
+  },
+  {
+    "CategoryName": "BMW",
+    "CategoryImg": "https://wallpaperaccess.com/full/1124999.jpg",
+    "productItem": [
+      {
+        "productName": "BMW1",
+        "productImg": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/concept-cars/_jcr_content/image/MQ6-12-image-20200908114040/00-mercedes-benz-eq-concept-cars-2560x1440.jpeg",
+        "SellerName": "Marzukerbar",
+        "SellerEmail": "omuk@gmail.com",
+        "location": "USA",
+        "OldPrice": 50000,
+        "useTime": "1 Year",
+        "SellPrice": 20000
+      },
+      {
+        "productName": "BMW2",
+        "productImg": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/concept-cars/_jcr_content/image/MQ6-12-image-20200908114040/00-mercedes-benz-eq-concept-cars-2560x1440.jpeg",
+        "SellerName": "Marzukerbar",
+        "SellerEmail": "omuk@gmail.com",
+        "location": "USA",
+        "OldPrice": 50000,
+        "useTime": "1 Year",
+        "SellPrice": 20000
+      },
+      {
+        "productName": "BMW3",
+        "productImg": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/concept-cars/_jcr_content/image/MQ6-12-image-20200908114040/00-mercedes-benz-eq-concept-cars-2560x1440.jpeg",
+        "SellerName": "Marzukerbar",
+        "SellerEmail": "omuk@gmail.com",
+        "location": "USA",
+        "OldPrice": 50000,
+        "useTime": "1 Year",
+        "SellPrice": 20000
+      }
+    ]
+  },
+  {
+    "productName": "Ferrari",
+    "productImg": "https://i.etsystatic.com/14967431/r/il/d25f2b/3411763338/il_570xN.3411763338_ph2b.jpg",
+    "productItem": [
+      {
+        "CarModelName": "Ferrari1",
+        "CarPhotoURL": "https://image.cnbcfm.com/api/v1/image/102251961-1.jpg?v=1418141376",
+        "SellerName": "Marzukerbar",
+        "SellerEmail": "omuk@gmail.com",
+        "location": "USA",
+        "OldPrice": 50000,
+        "useTime": "1 Year",
+        "SellPrice": 20000
+      },
+      {
+        "productName": "Ferrari1",
+        "productImg": "https://images.cars.com/cldstatic/wp-content/uploads/ferrari-purosangue-2023-exterior-side-profile-oem.jpg",
+        "SellerName": "Marzukerbar",
+        "SellerEmail": "omuk@gmail.com",
+        "location": "USA",
+        "OldPrice": 50000,
+        "useTime": "1 Year",
+        "SellPrice": 20000
+      },
+      {
+        "productName": "Ferrari3",
+        "productImg": "https://cdn.autoportal.com/img/new-cars-gallery/ferrari/gtc4-lusso/colors/44270327dd29e6a332c6ab4289cc6c70.jpg",
+        "SellerName": "Marzukerbar",
+        "SellerEmail": "omuk@gmail.com",
+        "location": "USA",
+        "OldPrice": 50000,
+        "useTime": "1 Year",
+        "SellPrice": 20000
+      }
+    ]
+  }
+]

@@ -3,6 +3,7 @@ import './CsarCategoris.css'
 import cover from '../../assets/caru-img/Mercedes-cover.jpg'
 import car from '../../assets/caru-img/ferrari.jpg'
 import BookModal from '../BookModal/BookModal';
+import Category from '../Category/Category';
 
 const CarCategoris = () => {
   return (
@@ -19,6 +20,8 @@ const CarCategoris = () => {
           </div>
         </div>
       </div>
+
+      <Category></Category>
 
       {/* card */}
 

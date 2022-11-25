@@ -1,11 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import Blogs from "../../Componets/Blogs/Blogs";
 import CarCategoris from "../../Componets/CarCategoris/CarCategoris";
+import Category from "../../Componets/Category/Category";
 import Login from "../../Componets/Login/Login";
 import SignUp from "../../Componets/SinUp/SignUp";
 import Stripe from "../../Componets/Stripe/Stripe";
 import Main from "../../Layout/Main/Main";
 import AddProductPage from "../../Pages/AddProductPage/AddProductPage";
+import CategoryPages from "../../Pages/CategoryPages/CategoryPages";
 import HomePage from "../../Pages/HomePage/HomePage";
 import MyOrderListPage from "../../Pages/MyOrderListPage/MyOrderListPage";
 import ProductMyList from "../../Pages/ProductMyList/ProductMyList";
@@ -33,7 +35,7 @@ const routers = createBrowserRouter([
          element: <Blogs></Blogs>
        },
        {
-         path: '/category',
+         path: '/Carcategory',
          element: <PrivateRoute><CarCategoris></CarCategoris></PrivateRoute>
        },
        {
@@ -51,6 +53,10 @@ const routers = createBrowserRouter([
        {
         path: '/myProductList',
         element: <ProductMyList></ProductMyList>
+       },
+       {
+        path: '/categoris',
+        element: <PrivateRoute> <Category></Category> </PrivateRoute>
        }
     ]
    }

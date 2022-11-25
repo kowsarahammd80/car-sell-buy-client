@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Category.css'
 import marcity from '../../assets/caru-img/marcity.jfif';
 import bmw from '../../assets/caru-img/bmw-logo.jpg';
 import audi from '../../assets/caru-img/audi-logo.avif'
+import CategoriCard from '../CategoriCard/CategoriCard';
+import { Route } from 'react-router-dom';
+import Loading from '../../Sheard/Loading/Loading';
 
 
 
 const Category = () => {
+
+  const [categories, setCategories] = useState([])
+
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+     fetch('http://localhost:5000/category')
+     .then(res => res.json())
+     .then(data => {
+      setCategories(data)
+      setLoading(false)
+    })
+     .catch(error => console.error(error))
+  },[])
+
+  if(loading){
+    return <Loading/>
+  }
 
   return (
 
@@ -14,48 +35,13 @@ const Category = () => {
 
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-        <div class="col">
+        {
+          categories.map(category => <CategoriCard
+           key={category._id}
+           category={category}
+          ></CategoriCard>)
+        }
 
-          <div class="card">
-            <img src={marcity} class="card-img-top height" alt="..." />
-            <div class="card-body text-center">
-              <h5 class="card-title">Mercedes-Benz</h5>
-              <div className=''>
-                <button className='btn bg-success text-white fw-bold'> <i class="fa-solid fa-car"></i> See Car</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col">
-
-          <div class="card">
-            <img src={bmw} class="card-img-top height" alt="..." />
-            <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <div className=''>
-                <button className='btn bg-success text-white fw-bold'>
-                <i class="fa-solid fa-car"></i> See Car</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col">
-
-          <div class="card">
-            <img src={audi} class="card-img-top height" alt="..." />
-            <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <div className=''>
-                <button className='btn bg-success text-white fw-bold'> <i class="fa-solid fa-car"></i> See Car</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
 
 
       </div>

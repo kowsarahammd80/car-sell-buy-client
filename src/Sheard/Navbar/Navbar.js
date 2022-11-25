@@ -34,7 +34,7 @@ const Navbar = () => {
                 <Link to='/blog' class="nav-link text-white" >Blogs</Link>
               </li>
               <li class="nav-item fw-bold">
-                <Link to='/category' class="nav-link text-white" >Category</Link>
+                <Link to='/Carcategory' class="nav-link text-white" >Category</Link>
               </li>
               <li class="nav-item fw-bold">
                 <Link to='/addproduct' class="nav-link text-white" >Add Product</Link>
