@@ -47,8 +47,6 @@ const CarCategoris = () => {
 
                   <BookModal />
 
-                  <button className='btn btn-danger'> Boost Product </button>
-
                   {/* modal end */}
 
                   <button className='btn btn-warning'><i class="fa-solid fa-flag"></i> Report Item</button>
@@ -79,8 +77,6 @@ const CarCategoris = () => {
 
                   <BookModal />
 
-                  <button className='btn btn-danger'> Boost Product </button>
-
                   {/* modal end */}
 
                   <button className='btn btn-warning'><i class="fa-solid fa-flag"></i> Report Item</button>
@@ -110,8 +106,6 @@ const CarCategoris = () => {
                   </button>
 
                   <BookModal />
-
-                  <button className='btn btn-danger'> Boost Product </button>
 
                   {/* modal end */}
 

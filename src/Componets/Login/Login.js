@@ -1,25 +1,31 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Auth/AuthProvider';
 import SocalSign from '../../Sheard/SocalSign/SocalSign';
 
 const Login = () => {
 
-  const {logIn} = useContext(AuthContext)
-  
-  const handleLogin = (event) => {
-     event.preventDefault()
-     const form = event.target
-     const email = form.email.value;
-     const password = form.password.value;
+  const { logIn } = useContext(AuthContext)
 
-      console.log(email, password)
-     logIn(email, password)
-     .then(result => {
-       const user = result.user;
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const from = location.state?.from?.pathname || '/'
+
+  const handleLogin = (event) => {
+    event.preventDefault()
+    const form = event.target
+    const email = form.email.value;
+    const password = form.password.value;
+
+    console.log(email, password)
+    logIn(email, password)
+      .then(result => {
+        const user = result.user;
         console.log(user)
-     })
-     .catch(error => console.error(error))
+        navigate(from, { replace: true })
+      })
+      .catch(error => console.error(error))
 
   }
 
@@ -79,9 +85,9 @@ const Login = () => {
 
           </form>
 
-          
-            <SocalSign />
-          
+
+          <SocalSign />
+
 
         </div>
 

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import {GoogleAuthProvider} from 'firebase/auth'
 import { AuthContext } from '../../Auth/AuthProvider';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SocalSign = () => {
 
@@ -8,12 +9,18 @@ const SocalSign = () => {
 
   const provider = new GoogleAuthProvider()
 
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const from = location.state?.from?.pathname || '/'
+
   const handleSocial = () => {
 
     providerLogIn(provider)
     .then(result => {
        const user = result.user
         console.log(user)
+        navigate(from, { replace: true })
     })
     .catch(error => console.error(error))
 

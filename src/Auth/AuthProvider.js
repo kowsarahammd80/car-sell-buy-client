@@ -33,6 +33,10 @@ export const AuthContext = createContext()
     return signOut(auth)
   }
 
+  const setUpdateProfile = (profile) => {
+    return updateProfile(auth.currentUser, profile)
+  }
+
   useEffect(() => {
     const unsubscribe =onAuthStateChanged(auth, currentUser => {
 
@@ -50,7 +54,7 @@ export const AuthContext = createContext()
   }
     
   const authInfo = {
-    signUp , logIn , loading ,user, providerLogIn, logOut
+    signUp , logIn , loading ,user, providerLogIn, logOut , setUpdateProfile
   }
 
   return (

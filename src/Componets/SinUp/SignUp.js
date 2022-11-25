@@ -1,27 +1,55 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Auth/AuthProvider';
 import SocalSign from '../../Sheard/SocalSign/SocalSign';
 
 const SignUp = () => {
 
-  const {signUp} = useContext(AuthContext)
-  
-  const handleSignUp = event =>{
+  const { signUp, setUpdateProfile } = useContext(AuthContext)
+
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const from = location.state?.from?.pathname || '/'
+
+  const handleSignUp = event => {
     event.preventDefault()
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
     const photoURL = form.photoURL.value;
     const password = form.password.value;
-     
+    const account = form.account.value;
+
     console.log(name, photoURL, password, email)
     signUp(email, password)
-    .then(result => {
-       const user = result.user
-       console.log(user)
-    })
-    .catch(error => console.error(error))
+      .then(result => {
+        const user = result.user
+        console.log(user)
+        setProfile(name, photoURL)
+        navigate(from, { replace: true })
+      })
+      .catch(error => console.error(error))
+      
+      const userData = {
+         email: email,
+         accountType: account
+      }
+
+      console.log(userData)
+
+
+  }
+
+  const setProfile = (name, photoURL) => {
+    const profile = {
+      displayName: name,
+      photoURL: photoURL
+    }
+
+    setUpdateProfile(profile)
+      .then(() => {})
+      .catch(error => console.error(error))
 
   }
 
@@ -79,11 +107,11 @@ const SignUp = () => {
               <input type="password" name='password' className="form-control  inputField" placeholder="Password" required />
             </div>
 
-            <select class="form-select" aria-label="Default select example">
+            <select name='account' class="form-select" aria-label="Default select example">
               <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="Buyer">Buyer</option>
+              <option value="Seller">Seller</option>
+
             </select>
 
             <div>
