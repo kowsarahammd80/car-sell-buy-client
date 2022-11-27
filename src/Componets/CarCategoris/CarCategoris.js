@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './CsarCategoris.css'
 import cover from '../../assets/caru-img/Mercedes-cover.jpg'
 import car from '../../assets/caru-img/ferrari.jpg'
@@ -6,6 +6,9 @@ import BookModal from '../BookModal/BookModal';
 import Category from '../Category/Category';
 
 const CarCategoris = () => {
+    
+
+
   return (
     <div>
       <div class="card text-bg-dark ">

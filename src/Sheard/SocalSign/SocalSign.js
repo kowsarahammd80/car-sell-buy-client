@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const SocalSign = () => {
 
-  const {providerLogIn} = useContext(AuthContext)
+  const {providerLogIn, user} = useContext(AuthContext)
 
   const provider = new GoogleAuthProvider()
 
@@ -19,10 +19,14 @@ const SocalSign = () => {
     providerLogIn(provider)
     .then(result => {
        const email = result.user.email
-        console.log(email)
+        console.log(email)          
+
         // data get
-        fetch(``)
-        navigate(from, { replace: true })
+        fetch(`http://localhost:5000/socialLogin/${user?.email}`)
+        .then((res) => res.json())
+          .then((result) => localStorage.setItem('AccountStatus',result[0].accountType));
+          navigate(from, { replace: true })
+
     })
     .catch(error => console.error(error))
 

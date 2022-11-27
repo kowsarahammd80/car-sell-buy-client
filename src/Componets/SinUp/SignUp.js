@@ -5,7 +5,7 @@ import SocalSign from '../../Sheard/SocalSign/SocalSign';
 
 const SignUp = () => {
 
-  const { signUp, setUpdateProfile } = useContext(AuthContext)
+  const { signUp, setUpdateProfile,  } = useContext(AuthContext)
 
   const location = useLocation()
   const navigate = useNavigate()
@@ -36,7 +36,7 @@ const SignUp = () => {
           accountType: account
        }
 
-       fetch('http://localhost:5000/registerData', {
+       fetch(`http://localhost:5000/registerData`, {
           method: 'POST',
           headers: {
             'content-type': 'application/json',
@@ -53,11 +53,6 @@ const SignUp = () => {
        
       })
       .catch(error => console.error(error))
-      
-      
-
-      
-
 
   }
 

@@ -1,6 +1,49 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../../Auth/AuthProvider';
 
-const BookModal = () => {
+const BookModal = ({ cardeta }) => {
+
+  const { user } = useContext(AuthContext)
+
+  const [booking, setBooking] = useState()
+
+
+  const handleBookfetch = (event) => {
+
+    event.preventDefault()
+    const form = event.target;
+    const location = form.location.value;
+    const number = form.number.value;
+    const price = form.price.value;
+    const productName = form.productName.value;
+    const email = form.email.value;
+    const UserName = form.UserName.value
+
+    form.reset('')
+    console.log(number, price, productName, email, UserName, location)
+
+    const bookingData = {
+      location: location,
+      number: number,
+      price: price,
+      productName: productName,
+      email: email,
+      UserName: UserName
+    }
+
+    fetch(`http://localhost:5000/bookingData`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(bookingData)
+
+    })
+      .then(res => res.json())
+      .then(data => setBooking(data))
+
+  }
+
   return (
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -13,49 +56,50 @@ const BookModal = () => {
 
             {/* modal form start */}
 
-            <form>
+            <form onSubmit={handleBookfetch}>
 
               <div class="mb-3">
 
                 <label for="recipient-name" class="col-form-label">User Name</label>
-                <input type="text" class="form-control" id="recipient-name" />
+                <input type="text" class="form-control" name='UserName' defaultValue={user.displayName} id="recipient-name" readOnly />
 
               </div>
 
               <div class="mb-3">
 
                 <label for="recipient-name" class="col-form-label">Email</label>
-                <input type="text" class="form-control" id="recipient-name" />
+                <input name='email' defaultValue={user.email} type="text" class="form-control" id="recipient-name" readOnly />
 
               </div>
               <div class="mb-3">
 
                 <label for="recipient-name" class="col-form-label">Product Name</label>
-                <input type="text" class="form-control" id="recipient-name" />
+                <input name='productName' defaultValue={cardeta?.model} type="text" class="form-control" id="recipient-name" readOnly />
 
               </div>
 
               <div class="mb-3">
 
-                <label for="recipient-name" class="col-form-label"> Price Price</label>
-                <input type="text" class="form-control" id="recipient-name" />
+                <label for="recipient-name" class="col-form-label">Price</label>
+                <input name='price' defaultValue={cardeta?.price} type="text" class="form-control" id="recipient-name" readOnly />
 
               </div>
 
               <div class="mb-3">
 
                 <label for="recipient-name" class="col-form-label">Phone Number</label>
-                <input type="text" class="form-control" id="recipient-name" />
+                <input name='number' type="text" class="form-control" id="recipient-name" />
 
               </div>
 
               <div class="mb-3">
 
                 <label for="recipient-name" class="col-form-label">Meet Location</label>
-                <input type="text" class="form-control" id="recipient-name" />
+                <input name='location' type="text" class="form-control" id="recipient-name" />
 
               </div>
 
+              <button type="submit" data-bs-dismiss="modal" class="btn btn-primary">Understood</button>
             </form>
 
             {/* modal form end */}
@@ -64,8 +108,11 @@ const BookModal = () => {
 
           </div>
           <div class="modal-footer">
+
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
+
+
+
           </div>
         </div>
       </div>

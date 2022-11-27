@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Auth/AuthProvider';
+import MyOrderTabel from './MyOrderTabel';
 
 const MyOrderList = () => {
+
+   const {user} = useContext(AuthContext)
+
+  const [myOrders, setMyOrsders] = useState([])
+
+  useEffect(() => {
+     fetch(`http://localhost:5000/bookingData/${user?.email}`)
+     .then(res => res.json())
+     .then(data => setMyOrsders(data))
+     .catch(e => console.error(e))
+  },[user?.email])
+
   return (
     <div className='container mt-3 mb-3'>
 
@@ -17,21 +31,19 @@ const MyOrderList = () => {
         <thead>
           <tr>
             <th scope="col">Product Name</th>
-            <th scope="col">Seller Name</th>
-            <th scope="col">Current Price</th>
+            <th scope="col">location</th>
+            <th scope="col"> Price </th>
             <th scope="col">Action</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr>
-            <th scope="row">tesla</th>
-            <td>100</td>
-            <td>500</td>
-            <td>
-              <Link to='/stripe'> <button className='btn btn-success '> Pay </button> </Link>
-            </td>
-          </tr>
+          {
+            myOrders.map(myOrder => <MyOrderTabel
+              key={myOrder._id}
+              myOrderData={myOrder}
+            ></MyOrderTabel>)
+          }
         </tbody>
 
       </table>

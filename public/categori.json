@@ -1,110 +1,30 @@
 [
   {
-    "CategoryName": "Mercedes",
-    "CategoryImg": "https://m.economictimes.com/thumb/msid-87212639,width-1200,height-900,resizemode-4,imgsize-33084/mercedes-benz.jpg",
-    "productItem": [
-      {
-        "productName": "Mercedes1",
-        "productImg": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/concept-cars/_jcr_content/image/MQ6-12-image-20200908114040/00-mercedes-benz-eq-concept-cars-2560x1440.jpeg",
-        "SellerName": "Marzukerbar",
-        "SellerEmail": "omuk@gmail.com",
-        "location": "USA",
-        "OldPrice": 50000,
-        "useTime": "1 Year",
-        "SellPrice": 20000
-      },
-      {
-        "productName": "Mercedes2",
-        "productImg": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/concept-cars/_jcr_content/image/MQ6-12-image-20200908114040/00-mercedes-benz-eq-concept-cars-2560x1440.jpeg",
-        "SellerName": "Marzukerbar",
-        "SellerEmail": "omuk@gmail.com",
-        "location": "USA",
-        "OldPrice": 50000,
-        "useTime": "1 Year",
-        "SellPrice": 20000
-      },
-      {
-        "productName": "Mercedes3",
-        "productImg": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/concept-cars/_jcr_content/image/MQ6-12-image-20200908114040/00-mercedes-benz-eq-concept-cars-2560x1440.jpeg",
-        "SellerName": "Marzukerbar",
-        "SellerEmail": "omuk@gmail.com",
-        "location": "USA",
-        "OldPrice": 50000,
-        "useTime": "1 Year",
-        "SellPrice": 20000
-      }
-    ]
+      "model": "Porsche",
+      "totalCars": 240,
+      "totalSellers": 34,
+      "lowestPrice": "230K",
+      "heightPrice": "56K",
+      "Img": "https://blogger.googleusercontent.com/img/a/AVvXsEiDEJtb0WxQS9tSRwzRu-lLWeIC8V4L007N0yGOY5dCkgpr-DmTz620uKs52cqKuINZ0eRIGmx4l7_4cja6o7YCvF7qLH2Z2cI21OfiW1jcrJD1R5WxWot8Rk70_Ue8f5qV2xp7Gu6lOJ2H7TLbxSsGIwTJTyWPu3zIuDx-LxJ1t4pi2Iv59BrDAxflJA",
+      "logo": "https://p4.wallpaperbetter.com/wallpaper/174/853/262/logo-logo-emblem-porsche-wallpaper-preview.jpg"
   },
   {
-    "CategoryName": "BMW",
-    "CategoryImg": "https://wallpaperaccess.com/full/1124999.jpg",
-    "productItem": [
-      {
-        "productName": "BMW1",
-        "productImg": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/concept-cars/_jcr_content/image/MQ6-12-image-20200908114040/00-mercedes-benz-eq-concept-cars-2560x1440.jpeg",
-        "SellerName": "Marzukerbar",
-        "SellerEmail": "omuk@gmail.com",
-        "location": "USA",
-        "OldPrice": 50000,
-        "useTime": "1 Year",
-        "SellPrice": 20000
-      },
-      {
-        "productName": "BMW2",
-        "productImg": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/concept-cars/_jcr_content/image/MQ6-12-image-20200908114040/00-mercedes-benz-eq-concept-cars-2560x1440.jpeg",
-        "SellerName": "Marzukerbar",
-        "SellerEmail": "omuk@gmail.com",
-        "location": "USA",
-        "OldPrice": 50000,
-        "useTime": "1 Year",
-        "SellPrice": 20000
-      },
-      {
-        "productName": "BMW3",
-        "productImg": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/concept-cars/_jcr_content/image/MQ6-12-image-20200908114040/00-mercedes-benz-eq-concept-cars-2560x1440.jpeg",
-        "SellerName": "Marzukerbar",
-        "SellerEmail": "omuk@gmail.com",
-        "location": "USA",
-        "OldPrice": 50000,
-        "useTime": "1 Year",
-        "SellPrice": 20000
-      }
-    ]
+      "model": "Mercedes",
+      "totalCars": 70,
+      "totalSellers": 21,
+      "lowestPrice": "420K",
+      "heightPrice": "980K",
+      "Img": "https://blogger.googleusercontent.com/img/a/AVvXsEhW3n2nfnnttTWlTj8aMHHcVfeuTpb_Z5MeSvbckDBeXul6BnskUrvBm8fSSrbq2VzE9HFW8pzw7XTd3YQoq8t76JljfLp2YXf8z5FGA1vQ9v0ZCFg2BgyRgu_D50MFOZFaOdwzwfOmN5ij7VeyuVt4c7GlxhnYcIqKtqt-f8QqdDyE3niNQIPTDxO1Sw",
+      "logo": "https://st.depositphotos.com/2075661/4453/i/450/depositphotos_44530293-stock-photo-mercedes-benz-sign-close-up.jpg"
   },
   {
-    "productName": "Ferrari",
-    "productImg": "https://i.etsystatic.com/14967431/r/il/d25f2b/3411763338/il_570xN.3411763338_ph2b.jpg",
-    "productItem": [
-      {
-        "CarModelName": "Ferrari1",
-        "CarPhotoURL": "https://image.cnbcfm.com/api/v1/image/102251961-1.jpg?v=1418141376",
-        "SellerName": "Marzukerbar",
-        "SellerEmail": "omuk@gmail.com",
-        "location": "USA",
-        "OldPrice": 50000,
-        "useTime": "1 Year",
-        "SellPrice": 20000
-      },
-      {
-        "productName": "Ferrari1",
-        "productImg": "https://images.cars.com/cldstatic/wp-content/uploads/ferrari-purosangue-2023-exterior-side-profile-oem.jpg",
-        "SellerName": "Marzukerbar",
-        "SellerEmail": "omuk@gmail.com",
-        "location": "USA",
-        "OldPrice": 50000,
-        "useTime": "1 Year",
-        "SellPrice": 20000
-      },
-      {
-        "productName": "Ferrari3",
-        "productImg": "https://cdn.autoportal.com/img/new-cars-gallery/ferrari/gtc4-lusso/colors/44270327dd29e6a332c6ab4289cc6c70.jpg",
-        "SellerName": "Marzukerbar",
-        "SellerEmail": "omuk@gmail.com",
-        "location": "USA",
-        "OldPrice": 50000,
-        "useTime": "1 Year",
-        "SellPrice": 20000
-      }
-    ]
+      "model": "Ford",
+      "totalCars": 560,
+      "totalSellers": 45,
+      "lowestPrice": "40K",
+      "heightPrice": "230K",
+      "Img": "https://blogger.googleusercontent.com/img/a/AVvXsEijN7R2mdXK9TkImWVM6jYUPWgW_vWZ7PGRSRe4Zvrif9AHnxLFKDBdufbGLBtJhDUVQdHYWXDmwiMT-p1MZ9hggB7kumSqFqwapebZuHmqr-rvlDhUt9PJj0EVw04rFAIwF_EW_zL8mE1kbEkRcHcUZvDb-Su-BpuFIb8gXJ5606oPGq6gx8eWcqrAoA",
+      "logo": "https://assets.turbologo.com/blog/en/2019/10/19084934/ford-logo-illustration-958x575.jpg"
   }
+ 
 ]
