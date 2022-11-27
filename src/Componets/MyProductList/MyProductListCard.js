@@ -1,9 +1,13 @@
 import React from 'react';
 
-const MyProductListCard = ({myProduct}) => {
+const MyProductListCard = ({myProduct, handleProductDelete}) => {
    
-  const {seller, model, image,carType,price,oldPrice,location,UsedTime,
+  const {_id,seller, model, image,carType,price,oldPrice,location,UsedTime,
     postTime,} = myProduct 
+
+
+
+
 
   return (
     <div class="col">
@@ -23,7 +27,7 @@ const MyProductListCard = ({myProduct}) => {
 
             <button className='btn btn-danger'><i class="fa-solid fa-rocket"></i> Boost Product </button>
 
-            <button className='btn btn-warning'><i class="fa-solid fa-trash-can"></i> Delete Item</button>
+            <button onClick={() =>handleProductDelete(_id)} className='btn btn-warning'><i class="fa-solid fa-trash-can"></i> Delete Item</button>
 
           </div>
         </div>

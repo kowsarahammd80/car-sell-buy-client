@@ -22,9 +22,9 @@ const SocalSign = () => {
         console.log(email)          
 
         // data get
-        fetch(`http://localhost:5000/socialLogin/${user?.email}`)
-        .then((res) => res.json())
-          .then((result) => localStorage.setItem('AccountStatus',result[0].accountType));
+        // fetch(`http://localhost:5000/socialLogin/${user?.email}`)
+        // .then((res) => res.json())
+        //   .then((result) => localStorage.setItem('AccountStatus',result[0].accountType));
           navigate(from, { replace: true })
 
     })

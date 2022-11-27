@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Auth/AuthProvider';
 
+
 const BookModal = ({ cardeta }) => {
 
   const { user } = useContext(AuthContext)
 
   const [booking, setBooking] = useState()
+
 
 
   const handleBookfetch = (event) => {
@@ -40,16 +42,19 @@ const BookModal = ({ cardeta }) => {
 
     })
       .then(res => res.json())
-      .then(data => setBooking(data))
+      .then(data => {
+        setBooking(data)
+      })
 
   }
+
 
   return (
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Car Booking</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -61,7 +66,7 @@ const BookModal = ({ cardeta }) => {
               <div class="mb-3">
 
                 <label for="recipient-name" class="col-form-label">User Name</label>
-                <input type="text" class="form-control" name='UserName' defaultValue={user.displayName} id="recipient-name" readOnly />
+                <input type="text" class="form-control" name='UserName' defaultValue={user?.displayName} id="recipient-name" readOnly />
 
               </div>
 
@@ -97,9 +102,11 @@ const BookModal = ({ cardeta }) => {
                 <label for="recipient-name" class="col-form-label">Meet Location</label>
                 <input name='location' type="text" class="form-control" id="recipient-name" />
 
+              </div >
+              <br />
+              <div className='d-flex justify-content-center'>
+                <button type="submit" data-bs-dismiss="modal" class="btn btn-danger w-50">Book</button>
               </div>
-
-              <button type="submit" data-bs-dismiss="modal" class="btn btn-primary">Understood</button>
             </form>
 
             {/* modal form end */}

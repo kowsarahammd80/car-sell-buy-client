@@ -3,14 +3,17 @@ import './Navbar.css'
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo/Logo1.png'
 import { AuthContext } from '../../Auth/AuthProvider';
+import useSeller from '../../Hooks/useSeller';
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext)
-   
+  const [isSeller] = useSeller(user?.email)
+  const [isBuyer] = useSeller(user?.email)
+
   const handleLogOut = () => {
-     logOut()
-     .then(result => {})
-     .catch(error => console.error(error))
+    logOut()
+      .then(result => { })
+      .catch(error => console.error(error))
   }
 
 
@@ -36,32 +39,77 @@ const Navbar = () => {
               <li class="nav-item fw-bold">
                 <Link to='/Carcategory' class="nav-link text-white" >Category</Link>
               </li>
+
+              {/* {
+                isSeller ?
+                  <></>
+                  :
+                  <li class="nav-item fw-bold">
+                    <Link to='/addproduct' class="nav-link text-white" >Add Product</Link>
+                  </li>
+              } */}
+
+
+              {/* {
+                isBuyer ?
+                  <></>
+                  :
+                  <li class="nav-item fw-bold">
+                    <Link to='/myorder' class="nav-link text-white" >My Order List</Link>
+                  </li>
+              } */}
+
               <li class="nav-item fw-bold">
-                <Link to='/addproduct' class="nav-link text-white" >Add Product</Link>
+                <Link to='/myorder' class="nav-link text-white" >My Order List</Link>
               </li>
-              <li class="nav-item fw-bold">
-                <Link to='/myorder' class="nav-link text-white" >My Order</Link>
-              </li>
+
+
+
+
+              {/* {
+                isSeller ?
+                  <></>
+                  :
+
+                  <li class="nav-item fw-bold">
+                    <Link to='/myProductList' class="nav-link text-white" >My Product List</Link>
+                  </li>
+              } */}
+
               <li class="nav-item fw-bold">
                 <Link to='/myProductList' class="nav-link text-white" >My Product List</Link>
               </li>
 
+
               {
-                 
-                 user?.uid ?
 
-                 <button onClick={handleLogOut} className='btn btn-danger fw-bold'>Log Out</button>
-                 :
-                <>
+                user?.uid ?
 
-                  <li class="nav-item fw-bold">
-                    <Link to='/login' class="nav-link text-white" >Login</Link>
-                  </li>
-                  <li class="nav-item fw-bold">
-                    <Link to='/signup' class="nav-link text-white">Sign Up</Link>
-                  </li>
-                </>
+                  <button onClick={handleLogOut} className='btn btn-danger fw-bold'>Log Out</button>
+                  :
+                  <>
+
+                    <li class="nav-item fw-bold">
+                      <Link to='/login' class="nav-link text-white" >Login</Link>
+                    </li>
+                    <li class="nav-item fw-bold">
+                      <Link to='/signup' class="nav-link text-white">Sign Up</Link>
+                    </li>
+                  </>
+
               }
+
+              <li class="nav-item fw-bold" >
+                <Link to='/deshboard' class="nav-link text-white" >
+                  Dash Board
+                </Link>
+              </li>
+
+              <li class="nav-item fw-bold" >
+                <Link to='/deshboard/alluser' class="nav-link text-white" >
+                  All User
+                </Link>
+              </li>
 
             </ul>
           </div>

@@ -47,7 +47,7 @@ const ReportModal = ({ cardates }) => {
               <br />
               <input defaultValue={_id} type="text" name="id" id="" readOnly />
               <br />
-              <button type="submit" data-bs-dismiss="modal" class="btn btn-danger">Save changes</button>
+              <button type="submit" data-bs-dismiss="modal" class="btn btn-danger"> Report</button>
             </form>
           </div>
           <div class="modal-footer">

@@ -11,7 +11,7 @@ const AddSection = () => {
 
     <div className='container mt-5 mb-3'>
        
-       <h2>Our Beat Deals Of the Weeks</h2>
+       <h2>Our Best Deals Of the Weeks</h2>
 
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
         <div class="col">

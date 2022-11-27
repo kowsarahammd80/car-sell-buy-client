@@ -1,6 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { AuthContext } from '../../Auth/AuthProvider';
+import React, { useState } from 'react';
 import BookModal from '../BookModal/BookModal';
 import ReportModal from '../ReaportModal/ReportModal';
 import './CategoryCard.css'
