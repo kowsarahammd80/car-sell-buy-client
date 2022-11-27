@@ -27,20 +27,21 @@ const Navbar = () => {
           <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse " id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item fw-bold">
-                <Link to='/' class="nav-link text-white" >Home</Link>
-              </li>
+          <div>
+            <div class="collapse navbar-collapse " id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item fw-bold">
+                  <Link to='/' class="nav-link text-white" >Home</Link>
+                </li>
 
-              <li class="nav-item fw-bold">
-                <Link to='/blog' class="nav-link text-white" >Blogs</Link>
-              </li>
-              <li class="nav-item fw-bold">
-                <Link to='/Carcategory' class="nav-link text-white" >Category</Link>
-              </li>
+                <li class="nav-item fw-bold">
+                  <Link to='/blog' class="nav-link text-white" >Blogs</Link>
+                </li>
+                <li class="nav-item fw-bold">
+                  <Link to='/Carcategory' class="nav-link text-white" >Category</Link>
+                </li>
 
-              {/* {
+                {/* {
                 isSeller ?
                   <></>
                   :
@@ -50,7 +51,7 @@ const Navbar = () => {
               } */}
 
 
-              {/* {
+                {/* {
                 isBuyer ?
                   <></>
                   :
@@ -59,14 +60,14 @@ const Navbar = () => {
                   </li>
               } */}
 
-              <li class="nav-item fw-bold">
-                <Link to='/myorder' class="nav-link text-white" >My Order List</Link>
-              </li>
+                <li class="nav-item fw-bold">
+                  <Link to='/myorder' class="nav-link text-white" >My Order List</Link>
+                </li>
 
 
 
 
-              {/* {
+                {/* {
                 isSeller ?
                   <></>
                   :
@@ -76,43 +77,45 @@ const Navbar = () => {
                   </li>
               } */}
 
-              <li class="nav-item fw-bold">
-                <Link to='/myProductList' class="nav-link text-white" >My Product List</Link>
-              </li>
+                <li class="nav-item fw-bold">
+                  <Link to='/myProductList' class="nav-link text-white" >My Product List</Link>
+                </li>
 
 
-              {
+                {
 
-                user?.uid ?
+                  user?.uid ?
 
-                  <button onClick={handleLogOut} className='btn btn-danger fw-bold'>Log Out</button>
-                  :
-                  <>
+                    <button onClick={handleLogOut} className='btn btn-danger fw-bold'>Log Out</button>
+                    :
+                    <>
 
-                    <li class="nav-item fw-bold">
-                      <Link to='/login' class="nav-link text-white" >Login</Link>
-                    </li>
-                    <li class="nav-item fw-bold">
-                      <Link to='/signup' class="nav-link text-white">Sign Up</Link>
-                    </li>
-                  </>
+                      <li class="nav-item fw-bold">
+                        <Link to='/login' class="nav-link text-white" >Login</Link>
+                      </li>
+                      <li class="nav-item fw-bold">
+                        <Link to='/signup' class="nav-link text-white">Sign Up</Link>
+                      </li>
+                    </>
 
-              }
+                }
 
-              <li class="nav-item fw-bold" >
-                <Link to='/deshboard' class="nav-link text-white" >
-                  Dash Board
-                </Link>
-              </li>
+                <li class="nav-item fw-bold" >
+                  <Link to='/deshboard' class="nav-link text-white" >
+                    Dash Board
+                  </Link>
+                </li>
 
-              <li class="nav-item fw-bold" >
-                <Link to='/deshboard/alluser' class="nav-link text-white" >
-                  All User
-                </Link>
-              </li>
+                <li class="nav-item fw-bold" >
+                  <Link to='/alluser' class="nav-link text-white" >
+                    All User
+                  </Link>
+                </li>
 
-            </ul>
+              </ul>
+            </div>
           </div>
+
         </div>
       </nav>
     </div>

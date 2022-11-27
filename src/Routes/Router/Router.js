@@ -69,20 +69,24 @@ const routers = createBrowserRouter([
          element: <PrivateRoute> <CarCategoryShowCard></CarCategoryShowCard> </PrivateRoute>
 
        },
+       {
+        path: '/alluser',
+        element: <AllUsers></AllUsers>
+       }
       
 
     ]
    },
-   {
-    path: '/deshboard',
-     element: <DeshBoardNave></DeshBoardNave>,
-     children:[
-      {
-        path: '/deshboard/alluser',
-        element: <AllUsers></AllUsers>
-      }
-     ]
-   }
+  //  {
+  //   path: '/deshboard',
+  //    element: <DeshBoardNave></DeshBoardNave>,
+  //    children:[
+  //     {
+  //       path: '/deshboard/alluser',
+  //       element: <AllUsers></AllUsers>
+  //     }
+  //    ]
+  //  }
    
 ])
 

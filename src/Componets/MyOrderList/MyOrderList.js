@@ -21,7 +21,7 @@ const MyOrderList = () => {
       <div>
            
            <h2>My Order List</h2>
-           <p>Our all list. Click on </p>
+           <p>Our all order list and pay hear</p>
 
       </div>
 
