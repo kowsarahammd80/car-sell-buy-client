@@ -12,7 +12,7 @@ const AllBuyer = () => {
   },[allBuyers])
 
   const handelBuyerDelete = (id) => {
-    const proceed = window.confirm("Are you sure deleting your Seller");
+    const proceed = window.confirm("Are you sure deleting your Buyer");
     if(proceed){
       fetch(`http://localhost:5000/allBuyerDelete/${id}`,{
         method: 'DELETE',

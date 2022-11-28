@@ -80,6 +80,12 @@ const Navbar = () => {
                 <Link to='/allbuyer' class="nav-link text-white" >
                   All Buyer
                 </Link>
+                </li>
+
+              <li>
+                <Link to='/allReport' class="nav-link text-white" >
+                  All Report
+                </Link>
               </li>
 
 
