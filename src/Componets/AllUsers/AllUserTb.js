@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AllUserTb = ({ allUserData }) => {
+const AllUserTb = ({ allUserData, handleSellerDelete }) => {
 
   const { _id, email, name, accountType } = allUserData
 
@@ -18,7 +18,7 @@ const AllUserTb = ({ allUserData }) => {
           <div className='d-flex justify-content-around'>
             <button className='btn btn-success'>Verified</button>
 
-            <button className='btn btn-danger'>Delete</button>
+            <button onClick={() =>handleSellerDelete(_id)} className='btn btn-danger'>Delete</button>
           </div>
         </div>
 

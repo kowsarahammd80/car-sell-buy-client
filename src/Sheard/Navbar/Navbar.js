@@ -4,11 +4,15 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/logo/Logo1.png'
 import { AuthContext } from '../../Auth/AuthProvider';
 import useSeller from '../../Hooks/useSeller';
+import useBuyer from '../../Hooks/useBuyer';
+
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext)
-  const [isSeller] = useSeller(user?.email)
-  const [isBuyer] = useSeller(user?.email)
+  // const [isSeller] = useSeller(user?.email)
+  // const [isBuyer] = useBuyer(user?.email)
+
+  // console.log(isSeller, isBuyer)
 
   const handleLogOut = () => {
     logOut()
@@ -27,94 +31,91 @@ const Navbar = () => {
           <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div>
-            <div class="collapse navbar-collapse " id="navbarNav">
-              <ul class="navbar-nav">
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item fw-bold">
+                <Link to='/' class="nav-link text-white" >Home</Link>
+              </li>
+
+              <li class="nav-item fw-bold">
+                <Link to='/blog' class="nav-link text-white" >Blogs</Link>
+              </li>
+              <li class="nav-item fw-bold">
+                <Link to='/Carcategory' class="nav-link text-white" >Category</Link>
+              </li>
+
+              {
+                // isSeller &&
                 <li class="nav-item fw-bold">
-                  <Link to='/' class="nav-link text-white" >Home</Link>
+                  <Link to='/addproduct' class="nav-link text-white" >Add Product</Link>
                 </li>
-
-                <li class="nav-item fw-bold">
-                  <Link to='/blog' class="nav-link text-white" >Blogs</Link>
-                </li>
-                <li class="nav-item fw-bold">
-                  <Link to='/Carcategory' class="nav-link text-white" >Category</Link>
-                </li>
-
-                {/* {
-                isSeller ?
-                  <></>
-                  :
-                  <li class="nav-item fw-bold">
-                    <Link to='/addproduct' class="nav-link text-white" >Add Product</Link>
-                  </li>
-              } */}
+              }
 
 
-                {/* {
-                isBuyer ?
-                  <></>
-                  :
-                  <li class="nav-item fw-bold">
-                    <Link to='/myorder' class="nav-link text-white" >My Order List</Link>
-                  </li>
-              } */}
-
+              {
+                // isBuyer &&
                 <li class="nav-item fw-bold">
                   <Link to='/myorder' class="nav-link text-white" >My Order List</Link>
                 </li>
+              }
 
 
 
-
-                {/* {
-                isSeller ?
-                  <></>
-                  :
-
-                  <li class="nav-item fw-bold">
-                    <Link to='/myProductList' class="nav-link text-white" >My Product List</Link>
-                  </li>
-              } */}
+              {
+                // isSeller &&
 
                 <li class="nav-item fw-bold">
                   <Link to='/myProductList' class="nav-link text-white" >My Product List</Link>
                 </li>
+              }
+
+              <li class="nav-item fw-bold" >
+                <Link to='/alluser' class="nav-link text-white" >
+                  All Seller
+                </Link>
+              </li>
+
+              <li class="nav-item fw-bold" >
+                <Link to='/allbuyer' class="nav-link text-white" >
+                  All Buyer
+                </Link>
+              </li>
 
 
-                {
 
-                  user?.uid ?
+              {
 
-                    <button onClick={handleLogOut} className='btn btn-danger fw-bold'>Log Out</button>
-                    :
-                    <>
+                user?.uid ?
 
-                      <li class="nav-item fw-bold">
-                        <Link to='/login' class="nav-link text-white" >Login</Link>
-                      </li>
-                      <li class="nav-item fw-bold">
-                        <Link to='/signup' class="nav-link text-white">Sign Up</Link>
-                      </li>
-                    </>
+                  <button onClick={handleLogOut} className='btn btn-danger fw-bold'>Log Out</button>
+                  :
+                  <>
 
-                }
+                    <li class="nav-item fw-bold">
+                      <Link to='/login' class="nav-link text-white" >Login</Link>
+                    </li>
+                    <li class="nav-item fw-bold">
+                      <Link to='/signup' class="nav-link text-white">Sign Up</Link>
+                    </li>
+                  </>
 
-                <li class="nav-item fw-bold" >
-                  <Link to='/deshboard' class="nav-link text-white" >
-                    Dash Board
-                  </Link>
-                </li>
+              }
 
-                <li class="nav-item fw-bold" >
-                  <Link to='/alluser' class="nav-link text-white" >
-                    All User
-                  </Link>
-                </li>
+              {
+                user?.email &&
+                <div className='d-flex align-item-center'>
+                  
+                    <p className='text-white'>{user.displayName}</p>
+                  
+                </div>
+              }
 
-              </ul>
-            </div>
+
+
+            </ul>
           </div>
+
 
         </div>
       </nav>

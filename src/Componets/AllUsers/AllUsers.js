@@ -8,7 +8,7 @@ const AllUsers = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allUser`)
+    fetch(`http://localhost:5000/allSellers`)
       .then(res => res.json())
       .then(data => {
         setAllUsers(data)
@@ -21,6 +21,17 @@ const AllUsers = () => {
     return <Loading/>
   }
 
+  const handleSellerDelete =(id) => {
+    const proceed = window.confirm("Are you sure deleting your Seller");
+     if(proceed){
+      fetch(`http://localhost:5000/allSellerDelete/${id}`,{
+       method: 'DELETE'
+     })
+     .then(res => res.json())
+     .then(data => console.log(data))
+     }
+  }
+
   return (
     <div className='container mt-3 mb-3'>
 
@@ -31,6 +42,7 @@ const AllUsers = () => {
           allUsers.map(allUser => <AllUserTb
            key={allUser._id}
            allUserData={allUser}
+           handleSellerDelete={handleSellerDelete}
           >
           </AllUserTb>)
         }

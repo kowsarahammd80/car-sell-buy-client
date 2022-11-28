@@ -1,5 +1,7 @@
 
 import { createBrowserRouter } from "react-router-dom";
+import AllBuyer from "../../Componets/AllBuyer/AllBuyer";
+import AllReport from "../../Componets/AllReport/AllReport";
 import AllUsers from "../../Componets/AllUsers/AllUsers";
 import Blogs from "../../Componets/Blogs/Blogs";
 import CarCategoris from "../../Componets/CarCategoris/CarCategoris";
@@ -15,7 +17,9 @@ import HomePage from "../../Pages/HomePage/HomePage";
 import MyOrderListPage from "../../Pages/MyOrderListPage/MyOrderListPage";
 import ProductMyList from "../../Pages/ProductMyList/ProductMyList";
 import DeshBoardNave from "../../Sheard/DeshBoardNave/DeshBoardNave";
+import BuyerRoute from "../BuyerRoute/BuyerRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import SellerRoute from "../SellerRoute/SellerRoute";
 
 
 
@@ -50,7 +54,7 @@ const routers = createBrowserRouter([
        },
        {
         path: '/myorder',
-        element:  <MyOrderListPage></MyOrderListPage> 
+        element:  <MyOrderListPage></MyOrderListPage>
        },
        {
         path: '/stripe',
@@ -72,21 +76,18 @@ const routers = createBrowserRouter([
        {
         path: '/alluser',
         element: <AllUsers></AllUsers>
-       }
-      
+       },
 
+      {
+        path: '/allbuyer',
+        element: <AllBuyer></AllBuyer>
+      },
+      {
+        path: '/allReport',
+        element: <AllReport></AllReport>
+      }
     ]
-   },
-  //  {
-  //   path: '/deshboard',
-  //    element: <DeshBoardNave></DeshBoardNave>,
-  //    children:[
-  //     {
-  //       path: '/deshboard/alluser',
-  //       element: <AllUsers></AllUsers>
-  //     }
-  //    ]
-  //  }
+   }
    
 ])
 
